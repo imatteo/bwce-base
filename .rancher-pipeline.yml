@@ -4,7 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: tibco/bwce-base:2.5.3
+      tag: bwce-base:2.5.3
       pushRemote: true
       registry: 127.0.0.1:34276
 timeout: 60

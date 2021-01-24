@@ -6,7 +6,7 @@ stages:
       buildContext: .
       tag: bwce-base:2.5.3
       pushRemote: true
-      registry: 127.0.0.1:34276
+      registry: 10.30.142.183:8082
     env:
       PLUGIN_DEBUG: "true"
       PLUGIN_INSECURE: "true"

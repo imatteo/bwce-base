@@ -7,6 +7,9 @@ stages:
       tag: bwce-base:2.5.3
       pushRemote: true
       registry: 10.30.142.201:31244
+    env:
+      PLUGIN_DEBUG: "true"
+      PLUGIN_INSECURE: "true"  
 timeout: 60
 notification:
   recipients:

@@ -1,0 +1,21 @@
+stages:
+- name: Docker
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: tibco/bwce-base:2.5.3
+      pushRemote: true
+      registry: 10.30.142.183:8082
+    env:
+      PLUGIN_DEBUG: "true"
+      PLUGIN_INSECURE: "true"
+timeout: 60
+notification:
+  recipients:
+  - recipient: rancher-notifier
+    notifier: c-s5dd6:n-89qlw
+  condition:
+  - Success
+  - Changed
+  - Failed
